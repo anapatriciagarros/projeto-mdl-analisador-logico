@@ -37,6 +37,7 @@ Para evitar a ambiguidade da língua natural, o sistema utiliza **Expressões Re
 * Limite de 80 caracteres.
 * Proposições atômicas limitadas a 2 palavras (ex: "faz sol").
 * Bloqueio de caracteres especiais e números para garantir a integridade da análise lógica.
+* O sistema ignora pronomes pessoais (eu, tu, ele, nós, etc.) para focar no núcleo da proposição (ex: "eu estudo" torna-se apenas "estudo").
 
 ### 2. Processamento (Tokenização)
 
@@ -113,7 +114,7 @@ Classificação: CONTINGÊNCIA
 
 ```
 
-### 📝 Explicação do Resultado
+### Explicação do Resultado
 
 * **Análise Lógica:** A sentença foi identificada como uma **Condicional** ($p \to q$). Na lógica formal, uma condicional só é falsa quando a premissa ($p$) é verdadeira e a conclusão ($q$) é falsa (linha 2 da tabela).  
 * **Classificação:** Como o resultado final apresenta tanto valores Verdadeiros quanto Falsos dependendo da entrada, a sentença é classificada tecnicamente como uma **Contingência**.  
