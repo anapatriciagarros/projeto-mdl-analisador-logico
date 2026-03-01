@@ -187,7 +187,7 @@ def main():
     print("      se [nao] prop1 entao [nao] prop2")
     print("      [nao] prop1 se e somente se [nao] prop2")
     print("  - Cada proposição: 1 ou 2 palavras (ex.: 'chove', 'faz frio')")
-    print("  - Sem acentos e sem pontuação.")
+    print("  - Sem acentos, sem números e sem pontuação.")
     print("  - Digite 'sair' para encerrar.\n")
 
     print("Exemplos:")
