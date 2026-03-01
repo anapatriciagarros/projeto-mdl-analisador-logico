@@ -3,6 +3,16 @@ import re
 MAX_LEN = 80
 ONLY_LETTERS_SPACES = re.compile(r"^[A-Za-z ]+$")  # sem acentos e sem símbolos
 
+PRONOMES_IGNORADOS = {
+    "eu", "tu", "ele", "ela",
+    "nos", "nós", "vos", "vós",
+    "eles", "elas"
+}
+
+def remover_pronomes_qualquer_lugar(texto: str) -> str:
+    palavras = [p for p in texto.split() if p not in PRONOMES_IGNORADOS]
+    return " ".join(palavras)
+
 def normalize(s: str) -> str:
     return " ".join(s.strip().lower().split())
 
@@ -21,6 +31,8 @@ def parse_proposicao(texto: str):
     Pode começar com 'nao ' para negação.
     """
     texto = normalize(texto)
+    texto = remover_pronomes_qualquer_lugar(texto)
+    
     if texto.startswith("nao "):
         neg = True
         prop = texto[4:].strip()
