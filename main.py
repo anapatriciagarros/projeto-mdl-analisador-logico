@@ -1,3 +1,6 @@
+# Versão enviada para revisão do professor
+
+
 import re
 
 MAX_LEN = 80
